@@ -15,37 +15,28 @@ const images = [
 
 const imagesContainer = document.querySelector(".gallery");
 
-// const creatListOfImages = images.map(function (image) {
-//   const newItem = document.createElement("li");
-//   const newImage = document.createElement('img');
-//   newItem.append(newImage);
-//   newImage.alt = image.alt;
-//   newImage.src = image.url;
 
-//   return newItem;
-// })
-//   .join(""); 
-// console.log(creatListOfImages);
-  
-// imagesContainer.insertAdjacentHTML("afterbegin", creatListOfImages); 
+// const creatNewList = (images) => `<li> <img src = ${images.url} alt = ${images.alt} width = 250 height = 150></li>`;
 
-// console.log(imagesContainer);
+// const arrayOfImages = images.map(creatNewList);
 
-const newimages = images.map((image) => 
-  (`<li class = images__item> ${newimages.alt = image.alt}</li>)`)
+// console.log({ arrayOfImages });
 
-)
-imagesContainer.insertAdjacentHTML("afterbegin", newimages);  
+// const elementsMarkUp = arrayOfImages.join("");
 
-// const newimages = images.map((image) => 
-//   `<li class = images__item> ${ images.map(function (image) {
-//   const newImage = document.createElement('img');
-//   newImage.alt = image.alt;
-//   newImage.src = image.url;
+// console.log(elementsMarkUp);
 
-//   return newImage;
-// })} </li>).join("");`
+// imagesContainer.insertAdjacentHTML("afterbegin", elementsMarkUp);
 
-// )
-// imagesContainer.insertAdjacentHTML("afterbegin", newimages);  
+
+
+const creatNewList = (images) => `<li> <img src = ${images.url} alt = ${images.alt} width = 250 height = 150></li>`;
+
+
+imagesContainer.insertAdjacentHTML("afterbegin", images.map(creatNewList).join(""));
+
+
+console.log(imagesContainer);
+
+
 
